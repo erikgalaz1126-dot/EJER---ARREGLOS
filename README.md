@@ -5,6 +5,7 @@ en la tabla impresa para asi poder facilitar su busqueda y no tener que definir 
 que el cambio es que en lugar de agregarlo solo devuelve el producto y lo imprime. en el metodo de eliminar hay un cambio en cuanto al final ya que sigue teniendo las mismas variables pero 
 hace que el valor del producto en las coordenadas ingresadas sea 0 asi borrando cualquier compra. Ya a lo ultimo imprimi los resultados de todas las peticiones e imprimí la tabla, igual pude
 haber usado una herencia en los metodos pero practicamente no optimizaria nada ya que solo ahorraria unas pocas lineas de codigo.
+Lo ultimo ya fue el menu en su porpio metodo que no fue nada del otro mundo solo uno simple consus respectivas validaciones.
 
 Readme Java
 Este si ya se me complicó mas jaja porque no tuve java en primer semestre asi que me tuve que apoyar en videos la definicion del rango de los meses y departamentos es practicamente lo mismo
@@ -16,4 +17,5 @@ extra para convertir los arreglos en texto y otro para encontrar el índice de u
 Ya en el metodo principal (main) hago las pruebas: primero inserto un par de ventas, luego muestro una de ellas, después elimino una venta y vuelvo a mostrar el resultado para comprobar que quedó 
 en cero. Al final se imprime la matriz completa de ventas mes por mes para ver cómo quedaron todos los datos organizados. En general el programa sirve como una forma rápida de controlar ventas 
 sin necesidad de estar definiendo variables fijas, ya que todo se maneja con coordenadas de mes y departamento.
+Lo ultimo ya fue el menu en una clase privada, esta fue la parte mas sencilla ya que es algo que no cambia mucho con respecto a Python.
 Por la extension creo q se entiende que me costó mas en java pero fue bueno ya que pude aprender a usarlo mejor aunque sea un poco basico mi codigo.
