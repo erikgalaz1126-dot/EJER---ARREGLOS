@@ -112,7 +112,7 @@ public class Ventas {
     }
 
     public static void main(String[] args) {
-        // Se puede iniciar con la tabla vacía
         menu();
     }
 }
+
