@@ -19,14 +19,58 @@ def eliminar_venta(mes, depto):
     j = departamentos.index(depto)
     ventas[i][j] = 0
 
-insertar_venta("Enero", "Ropa", 1500)
-insertar_venta("Febrero", "Deportes", 2000)
+def mostrar_tabla():
+    print("\n{:12}".format("Mes"), end="")
+    for depto in departamentos:
+        print("{:12}".format(depto), end="")
+    print()
+    print("-" * (12 + 12*len(departamentos)))
+    for i in range(12):
+        print("{:12}".format(meses[i]), end="")
+        for j in range(3):
+            print("{:<12}".format(ventas[i][j]), end="")
+        print()
 
-print("Venta en Enero-Ropa:", buscar_venta("Enero", "Ropa"))
+def menu():
+    while True:
+        print("\n--- Menú de Ventas ---")
+        print("1. Insertar venta")
+        print("2. Buscar venta")
+        print("3. Eliminar venta")
+        print("4. Mostrar tabla de ventas")
+        print("5. Salir")
+        opcion = input("Seleccione una opción: ")
 
-eliminar_venta("Enero", "Ropa")
-print("Venta en Enero-Ropa después de eliminar:", buscar_venta("Enero", "Ropa"))
+        if opcion == "1":
+            mes = input("Ingrese el mes: ").capitalize()
+            depto = input("Ingrese el departamento: ").capitalize()
+            valor = float(input("Ingrese el valor de la venta: "))
+            if mes in meses and depto in departamentos:
+                insertar_venta(mes, depto, valor)
+                print("Venta registrada correctamente.")
+            else:
+                print("Mes o departamento inválido.")
+        elif opcion == "2":
+            mes = input("Ingrese el mes: ").capitalize()
+            depto = input("Ingrese el departamento: ").capitalize()
+            if mes in meses and depto in departamentos:
+                print(f"Venta en {mes}-{depto}: {buscar_venta(mes, depto)}")
+            else:
+                print("Mes o departamento inválido.")
+        elif opcion == "3":
+            mes = input("Ingrese el mes: ").capitalize()
+            depto = input("Ingrese el departamento: ").capitalize()
+            if mes in meses and depto in departamentos:
+                eliminar_venta(mes, depto)
+                print("Venta eliminada correctamente.")
+            else:
+                print("Mes o departamento inválido.")
+        elif opcion == "4":
+            mostrar_tabla()
+        elif opcion == "5":
+            print("Saliendo del programa...")
+            break
+        else:
+            print("Opción inválida. Intente de nuevo.")
 
-print("\nMatriz final de ventas:")
-for i in range(12):
-    print(meses[i], ventas[i])
+menu()
